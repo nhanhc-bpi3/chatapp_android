@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "701342574164",
+    "firebase_url": "https://pwd391-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "pwd391",
+    "storage_bucket": "pwd391.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701342574164:android:18321c19f84a812d00efc1",
+        "android_client_info": {
+          "package_name": "com.fpt.edu.blogapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "701342574164-dnnpa9gc713vod3enfcao01f9acnq2lv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBionMX5sY4EPd5aXoNVkbuURa8wp4lnbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "701342574164-dnnpa9gc713vod3enfcao01f9acnq2lv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701342574164:android:87012b2e606aac1100efc1",
+        "android_client_info": {
+          "package_name": "fpt.edu.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "701342574164-dnnpa9gc713vod3enfcao01f9acnq2lv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBionMX5sY4EPd5aXoNVkbuURa8wp4lnbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "701342574164-dnnpa9gc713vod3enfcao01f9acnq2lv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
