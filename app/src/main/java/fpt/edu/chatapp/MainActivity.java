@@ -23,6 +23,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
 import fpt.edu.chatapp.Fragments.ChatsFragment;
 import fpt.edu.chatapp.Fragments.ProfileFragment;
 import fpt.edu.chatapp.Fragments.UsersFragment;
@@ -64,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 User user = dataSnapshot.getValue(User.class);
                 username.setText(user.getUsername());
-                if (user.getImageURL().equals("default")){
-                    profile_image.setImageResource(R.mipmap.ic_launcher);
+                if (user.getImageURL().equals("default")) {
+                    profile_image.setImageResource(R.drawable.applogo);
                 } else {
 
                     //change this
@@ -89,17 +90,17 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
                 int unread = 0;
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     Chat chat = snapshot.getValue(Chat.class);
-                    if (chat.getReceiver().equals(firebaseUser.getUid()) && !chat.isIsseen()){
+                    if (chat.getReceiver().equals(firebaseUser.getUid()) && !chat.isIsseen()) {
                         unread++;
                     }
                 }
 
-                if (unread == 0){
+                if (unread == 0) {
                     viewPagerAdapter.addFragment(new ChatsFragment(), "Chats");
                 } else {
-                    viewPagerAdapter.addFragment(new ChatsFragment(), "("+unread+") Chats");
+                    viewPagerAdapter.addFragment(new ChatsFragment(), "(" + unread + ") Chats");
                 }
 
                 viewPagerAdapter.addFragment(new UsersFragment(), "Users");
@@ -128,9 +129,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
 
-            case  R.id.logout:
+            case R.id.logout:
                 FirebaseAuth.getInstance().signOut();
                 // change this code beacuse your app will crash
                 startActivity(new Intent(MainActivity.this, StartActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
@@ -145,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
         private ArrayList<Fragment> fragments;
         private ArrayList<String> titles;
 
-        ViewPagerAdapter(FragmentManager fm){
+        ViewPagerAdapter(FragmentManager fm) {
             super(fm);
             this.fragments = new ArrayList<>();
             this.titles = new ArrayList<>();
@@ -161,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
             return fragments.size();
         }
 
-        public void addFragment(Fragment fragment, String title){
+        public void addFragment(Fragment fragment, String title) {
             fragments.add(fragment);
             titles.add(title);
         }
@@ -175,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void status(String status){
+    private void status(String status) {
         reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
 
         HashMap<String, Object> hashMap = new HashMap<>();
