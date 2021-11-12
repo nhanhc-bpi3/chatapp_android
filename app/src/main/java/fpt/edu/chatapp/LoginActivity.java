@@ -17,6 +17,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import fpt.edu.chatapp.Validate.Validate;
+
 public class LoginActivity extends AppCompatActivity {
 
     EditText email, password;
@@ -59,8 +61,10 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Email are required", Toast.LENGTH_SHORT).show();
                 } else if (TextUtils.isEmpty(txt_password)) {
                     Toast.makeText(LoginActivity.this, "Password are required", Toast.LENGTH_SHORT).show();
+                } else if (!Validate.validateEmail(txt_email)) {
+                    Toast.makeText(LoginActivity.this, "Email invalidate!", Toast.LENGTH_SHORT).show();
+                    return;
                 } else {
-
                     auth.signInWithEmailAndPassword(txt_email, txt_password)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override

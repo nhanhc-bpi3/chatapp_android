@@ -18,6 +18,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import fpt.edu.chatapp.R;
+import fpt.edu.chatapp.Validate.Validate;
+
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 import java.util.HashMap;
@@ -58,7 +60,9 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "All fileds are required", Toast.LENGTH_SHORT).show();
                 } else if (txt_password.length() < 6 ){
                     Toast.makeText(RegisterActivity.this, "password must be at least 6 characters", Toast.LENGTH_SHORT).show();
-                } else {
+                } else if(!Validate.validateEmail(txt_email)){
+                    Toast.makeText(RegisterActivity.this, "Email invalidate!", Toast.LENGTH_SHORT).show();
+                }else {
                     register(txt_username, txt_email, txt_password);
                 }
             }
