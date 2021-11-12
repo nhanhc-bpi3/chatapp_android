@@ -14,6 +14,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import fpt.edu.chatapp.R;
+import fpt.edu.chatapp.Validate.Validate;
 
 public class ResetPasswordActivity extends AppCompatActivity {
 
@@ -45,6 +46,9 @@ public class ResetPasswordActivity extends AppCompatActivity {
                 if (email.equals("")){
                     Toast.makeText(ResetPasswordActivity.this, "All fileds are required!", Toast.LENGTH_SHORT).show();
                 } else {
+                    if(!Validate.validateEmail(email)){
+                        Toast.makeText(ResetPasswordActivity.this, "Email invalidate !", Toast.LENGTH_SHORT).show();
+                    }
                     firebaseAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
