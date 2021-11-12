@@ -16,11 +16,8 @@
         <entry key="..\:/AT/Code/Android/ChatAppTutorial/app/src/main/res/layout/fragment_users.xml" value="0.20260416666666667" />
         <entry key="..\:/AT/Code/Android/ChatAppTutorial/app/src/main/res/layout/user_item.xml" value="0.20260416666666667" />
         <entry key="..\:/AT/Code/Android/ChatAppTutorial/app/src/main/res/menu/menu.xml" value="0.20260416666666667" />
-        <entry key="..\:/ChattingApp/chatapp_android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.24114583333333334" />
         <entry key="..\:/ChattingApp/chatapp_android/app/src/main/res/drawable/background_right.xml" value="0.24114583333333334" />
-        <entry key="..\:/ChattingApp/chatapp_android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.24114583333333334" />
         <entry key="..\:/ChattingApp/chatapp_android/app/src/main/res/drawable/rounded_btn.xml" value="0.24114583333333334" />
-        <entry key="..\:/ChattingApp/chatapp_android/app/src/main/res/drawable/rounded_chatbox_edt.xml" value="0.24114583333333334" />
         <entry key="..\:/ChattingApp/chatapp_android/app/src/main/res/drawable/rounded_edt.xml" value="0.24114583333333334" />
         <entry key="..\:/ChattingApp/chatapp_android/app/src/main/res/drawable/rounded_layout.xml" value="0.24114583333333334" />
         <entry key="..\:/ChattingApp/chatapp_android/app/src/main/res/layout/activity_login.xml" value="0.22192028985507245" />
@@ -36,7 +33,6 @@
         <entry key="..\:/ChattingApp/chatapp_android/app/src/main/res/layout/fragment_profile.xml" value="0.225" />
         <entry key="..\:/ChattingApp/chatapp_android/app/src/main/res/layout/fragment_users.xml" value="0.225" />
         <entry key="..\:/ChattingApp/chatapp_android/app/src/main/res/layout/user_item.xml" value="0.225" />
-        <entry key="..\:/ChattingApp/chatapp_android/app/src/main/res/menu/menu.xml" value="0.225" />
       </map>
     </option>
   </component>
