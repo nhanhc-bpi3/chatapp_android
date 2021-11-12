@@ -98,24 +98,6 @@ public class ProfileFragment extends Fragment {
                 openImage();
             }
         });
-        
-        btn_forgot = view.findViewById(R.id.btn_forgotPass);
-        btn_forgot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getActivity(), ResetPasswordActivity.class));
-            }
-        });
-
-        btn_logout = view.findViewById(R.id.btn_logout);
-        btn_logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(getActivity(), StartActivity.class));
-                getActivity().finish();
-            }
-        });
 
         return view;
     }
