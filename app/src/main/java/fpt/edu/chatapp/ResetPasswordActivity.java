@@ -44,7 +44,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
                 String email = send_email.getText().toString();
 
                 if (email.equals("")){
-                    Toast.makeText(ResetPasswordActivity.this, "All fileds are required!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ResetPasswordActivity.this, "Please enter your email!", Toast.LENGTH_SHORT).show();
                 } else {
                     if(!Validate.validateEmail(email)){
                         Toast.makeText(ResetPasswordActivity.this, "Email invalidate !", Toast.LENGTH_SHORT).show();
