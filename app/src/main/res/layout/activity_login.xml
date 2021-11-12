@@ -8,64 +8,66 @@
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/bar_layout"/>
+        layout="@layout/bar_layout" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
         android:layout_below="@id/toolbar"
-        android:padding="16dp"
-        android:layout_height="wrap_content">
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:layout_marginTop="70dp"
+            android:text="@string/app_name"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <EditText
             android:id="@+id/email"
-            android:inputType="textEmailAddress"
-            android:layout_marginTop="10dp"
-            app:met_floatingLabel="normal"
-            android:hint="Email"/>
-
-        <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50sp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/rounded_edt"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="8sp" />
+
+
+        <EditText
             android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_edt"
+            android:hint="@string/password"
             android:inputType="textPassword"
-            android:layout_marginTop="10dp"
-            app:met_floatingLabel="normal"
-            android:hint="Password"/>
+            android:paddingLeft="8sp" />
 
         <Button
+            android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="login"
-            android:id="@+id/btn_login"
-            android:background="@color/colorPrimaryDark"
             android:layout_marginTop="10dp"
-            android:textColor="#fff"/>
+            android:background="@drawable/rounded_btn"
+            android:text="@string/btn_login"
+            android:textColor="#fff" />
 
         <TextView
+            android:id="@+id/forgot_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Forgot you password?"
-            android:layout_marginTop="10dp"
             android:layout_gravity="end"
-            android:textStyle="bold"
-            android:id="@+id/forgot_password"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/forgot_you_password"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
-
 
 
 </RelativeLayout>

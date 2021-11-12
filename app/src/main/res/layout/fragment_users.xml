@@ -5,17 +5,37 @@
     android:layout_height="match_parent"
     tools:context="fpt.edu.chatapp.Fragments.UsersFragment">
 
-    <EditText
+    <LinearLayout
+        android:id="@+id/search_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:hint="Search..."
-        android:id="@+id/search_users"/>
+        android:layout_margin="15sp"
+        android:background="@drawable/rounded_layout"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10sp"
+            android:src="@drawable/magnifier" />
+
+        <EditText
+            android:id="@+id/search_users"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@null"
+            android:hint="@string/search" />
+    </LinearLayout>
+
 
     <android.support.v7.widget.RecyclerView
-        android:layout_below="@id/search_users"
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_layout" />
 
 </RelativeLayout>
