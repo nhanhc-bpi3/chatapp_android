@@ -54,7 +54,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="About us FLOXT"
-            android:textColor="#E02401"/>
+            android:textColor="#E02401"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
         <View
             android:layout_width="wrap_content"
@@ -63,6 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Power by 4 man FPT"
+            android:textStyle="bold"
             android:textColor="#FF2442"/>
         <View
             android:layout_width="wrap_content"
