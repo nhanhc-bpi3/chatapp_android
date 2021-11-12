@@ -17,6 +17,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import fpt.edu.chatapp.R;
+import fpt.edu.chatapp.Validate.Validate;
+
+import com.rengwuxian.materialedittext.MaterialEditText;
+
+
 public class LoginActivity extends AppCompatActivity {
 
     EditText email, password;
@@ -55,12 +61,13 @@ public class LoginActivity extends AppCompatActivity {
                 String txt_email = email.getText().toString();
                 String txt_password = password.getText().toString();
 
-                if (TextUtils.isEmpty(txt_email)) {
-                    Toast.makeText(LoginActivity.this, "Email are required", Toast.LENGTH_SHORT).show();
-                } else if (TextUtils.isEmpty(txt_password)) {
-                    Toast.makeText(LoginActivity.this, "Password are required", Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_password)) {
+                    Toast.makeText(LoginActivity.this, "All fileds are required", Toast.LENGTH_SHORT).show();
                 } else {
-
+                    if (!Validate.validateEmail(txt_email)) {
+                        Toast.makeText(LoginActivity.this, "Email invalidate", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                     auth.signInWithEmailAndPassword(txt_email, txt_password)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
@@ -71,7 +78,7 @@ public class LoginActivity extends AppCompatActivity {
                                         startActivity(intent);
                                         finish();
                                     } else {
-                                        Toast.makeText(LoginActivity.this, "Email or password is wrong!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(LoginActivity.this, "Authentication failed!", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
