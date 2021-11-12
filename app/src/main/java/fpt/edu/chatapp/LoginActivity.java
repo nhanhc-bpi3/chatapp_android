@@ -18,8 +18,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 import fpt.edu.chatapp.R;
+import fpt.edu.chatapp.Validate.Validate;
 
 import com.rengwuxian.materialedittext.MaterialEditText;
+
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -62,7 +64,10 @@ public class LoginActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_password)) {
                     Toast.makeText(LoginActivity.this, "All fileds are required", Toast.LENGTH_SHORT).show();
                 } else {
-
+                    if (!Validate.validateEmail(txt_email)) {
+                        Toast.makeText(LoginActivity.this, "Email invalidate", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                     auth.signInWithEmailAndPassword(txt_email, txt_password)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
