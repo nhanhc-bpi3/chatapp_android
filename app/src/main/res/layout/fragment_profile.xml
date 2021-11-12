@@ -53,11 +53,48 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="About us FLOXT" />
+            android:text="About us FLOXT"
+            android:textColor="#E02401"/>
 
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Power by 4 man FPT" />
+            android:text="Power by 4 man FPT"
+            android:textColor="#FF2442"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nguyễn Lê Ngọc Khánh"
+            android:textColor="@color/colorOrange"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lê Anh Tuấn"
+            android:textColor="@color/colorOrange"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nguyễn Tấn Huy"
+            android:textColor="@color/colorOrange"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hoàng Chí Nhân"
+            android:textColor="@color/colorOrange"/>
     </LinearLayout>
 </RelativeLayout>
