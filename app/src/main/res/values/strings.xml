@@ -10,7 +10,4 @@
     <string name="password">Password</string>
     <string name="forgot_you_password">Forgot you password?</string>
     <string name="username">Username</string>
-    <string name="type_a_message">Type a message...</string>
-    <string name="btn_reset">Reset password</string>
-    <string name="btn_logout">Logout</string>
 </resources>
