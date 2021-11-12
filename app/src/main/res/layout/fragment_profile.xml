@@ -36,25 +36,50 @@
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/btn_forgotPass"
+            <android.support.v7.widget.LinearLayoutCompat
+                android:id="@+id/forgot_password_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/username"
-                android:layout_margin="10sp"
-                android:text="@string/btn_reset"
-                android:textColor="#000000"
-                android:textSize="17sp" />
+                android:gravity="center_vertical">
 
-            <TextView
-                android:id="@+id/btn_logout"
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:src="@drawable/key" />
+
+                <TextView
+                    android:id="@+id/btn_forgotPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_margin="10sp"
+                    android:text="@string/btn_reset"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <android.support.v7.widget.LinearLayoutCompat
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_forgotPass"
-                android:layout_margin="10sp"
-                android:text="@string/btn_logout"
-                android:textColor="#000000"
-                android:textSize="17sp" />
+                android:layout_below="@+id/forgot_password_layout"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:src="@drawable/logout" />
+
+                <TextView
+                    android:id="@+id/btn_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_margin="10sp"
+                    android:text="@string/btn_logout"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+            </android.support.v7.widget.LinearLayoutCompat>
 
         </RelativeLayout>
 
