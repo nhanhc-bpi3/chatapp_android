@@ -17,9 +17,9 @@
         android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="60sp"
+        android:layout_marginLeft="20sp"
         android:layout_marginTop="80dp"
-        android:layout_marginRight="60sp"
+        android:layout_marginRight="20sp"
         android:background="@drawable/rounded_btn"
         android:text="@string/btn_login"
         android:textColor="#FFFFFF" />
@@ -28,9 +28,9 @@
         android:id="@+id/register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="60sp"
+        android:layout_marginLeft="20sp"
         android:layout_marginTop="25dp"
-        android:layout_marginRight="60sp"
+        android:layout_marginRight="20sp"
         android:background="@drawable/rounded_btn"
         android:text="@string/btn_register"
         android:textColor="#FFFFFF" />
