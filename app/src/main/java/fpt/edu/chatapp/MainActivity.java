@@ -117,7 +117,29 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+
+            case R.id.logout:
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(MainActivity.this, StartActivity.class));
+                return true;
+            case R.id.reset_pass:
+                startActivity(new Intent(MainActivity.this, ResetPasswordActivity.class));
+                return true;
+        }
+
+        return false;
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {

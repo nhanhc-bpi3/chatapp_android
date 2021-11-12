@@ -7,6 +7,7 @@
     tools:context="fpt.edu.chatapp.Fragments.ProfileFragment">
 
     <android.support.v7.widget.CardView
+        android:id="@+id/profileLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -36,54 +37,27 @@
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
-            <android.support.v7.widget.LinearLayoutCompat
-                android:id="@+id/forgot_password_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/username"
-                android:gravity="center_vertical">
-
-                <ImageView
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
-                    android:src="@drawable/key" />
-
-                <TextView
-                    android:id="@+id/btn_forgotPass"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_margin="10sp"
-                    android:text="@string/btn_reset"
-                    android:textColor="#000000"
-                    android:textSize="17sp" />
-            </android.support.v7.widget.LinearLayoutCompat>
-
-            <android.support.v7.widget.LinearLayoutCompat
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/forgot_password_layout"
-                android:gravity="center_vertical">
-
-                <ImageView
-                    android:layout_width="30sp"
-                    android:layout_height="30sp"
-                    android:src="@drawable/logout" />
-
-                <TextView
-                    android:id="@+id/btn_logout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_margin="10sp"
-                    android:text="@string/btn_logout"
-                    android:textColor="#000000"
-                    android:textSize="17sp" />
-            </android.support.v7.widget.LinearLayoutCompat>
 
         </RelativeLayout>
 
 
     </android.support.v7.widget.CardView>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileLayout"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About us FLOXT" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Power by 4 man FPT" />
+    </LinearLayout>
 </RelativeLayout>
