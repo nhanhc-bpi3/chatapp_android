@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
 import fpt.edu.chatapp.R;
 import fpt.edu.chatapp.Validate.Validate;
 
@@ -56,26 +57,26 @@ public class RegisterActivity extends AppCompatActivity {
                 String txt_email = email.getText().toString();
                 String txt_password = password.getText().toString();
 
-                if (TextUtils.isEmpty(txt_username) || TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_password)){
-                    Toast.makeText(RegisterActivity.this, "All fileds are required", Toast.LENGTH_SHORT).show();
-                } else if (txt_password.length() < 6 ){
+                if (TextUtils.isEmpty(txt_username) || TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_password)) {
+                    Toast.makeText(RegisterActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
+                } else if (txt_password.length() < 6) {
                     Toast.makeText(RegisterActivity.this, "password must be at least 6 characters", Toast.LENGTH_SHORT).show();
-                } else if(!Validate.validateEmail(txt_email)){
+                } else if (!Validate.validateEmail(txt_email)) {
                     Toast.makeText(RegisterActivity.this, "Email invalidate!", Toast.LENGTH_SHORT).show();
-                }else {
+                } else {
                     register(txt_username, txt_email, txt_password);
                 }
             }
         });
     }
 
-    private void register(final String username, String email, String password){
+    private void register(final String username, String email, String password) {
 
         auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             FirebaseUser firebaseUser = auth.getCurrentUser();
                             assert firebaseUser != null;
                             String userid = firebaseUser.getUid();
@@ -92,7 +93,7 @@ public class RegisterActivity extends AppCompatActivity {
                             reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
-                                    if (task.isSuccessful()){
+                                    if (task.isSuccessful()) {
                                         Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                         startActivity(intent);
@@ -101,7 +102,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 }
                             });
                         } else {
-                            Toast.makeText(RegisterActivity.this, "You can't register woth this email or password", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "You can't register with this email or password", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
