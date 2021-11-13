@@ -98,13 +98,13 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (unread == 0) {
-                    viewPagerAdapter.addFragment(new ChatsFragment(), "Chats");
+                    viewPagerAdapter.addFragment(new ChatsFragment(), "✉" + "\n" + "Chats");
                 } else {
                     viewPagerAdapter.addFragment(new ChatsFragment(), "(" + unread + ") Chats");
                 }
 
-                viewPagerAdapter.addFragment(new UsersFragment(), "Users");
-                viewPagerAdapter.addFragment(new ProfileFragment(), "Profile");
+                viewPagerAdapter.addFragment(new UsersFragment(), "☺" + "\n" + "Users");
+                viewPagerAdapter.addFragment(new ProfileFragment(), "👔" + "\n" +"Profile");
 
                 viewPager.setAdapter(viewPagerAdapter);
 
