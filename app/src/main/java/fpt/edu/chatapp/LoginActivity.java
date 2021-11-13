@@ -63,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Password are required", Toast.LENGTH_SHORT).show();
                 } else if (!Validate.validateEmail(txt_email)) {
                     Toast.makeText(LoginActivity.this, "Email invalidate!", Toast.LENGTH_SHORT).show();
-                    return;
+
                 } else {
                     auth.signInWithEmailAndPassword(txt_email, txt_password)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
